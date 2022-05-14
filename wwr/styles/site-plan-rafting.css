@@ -10,6 +10,7 @@ Fonts are separated by a | */
   --secondary-color: #70cfde ;
   --accent1-color: #fff;
   --accent2-color: #150641;
+  --accent3-color: #999;
 
   /* change the values below to your chosen font(s) */
   --heading-font: "Barlow Condensed";
