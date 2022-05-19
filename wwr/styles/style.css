@@ -49,6 +49,22 @@ nav a:hover {
 
 }
 
+main section {
+    text-align: center;
+    
+
+}
+
+main section img {
+    box-sizing: border-box;
+
+}
+
+h2 {
+    margin: 0;
+
+}
+
 .home-title {
     font-family: "Barlow Condensed", Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 2em;
@@ -83,11 +99,6 @@ h4{
     border: 10px solid #150641
 }
 
-main section img {
-    box-sizing: border-box;
-
-}
-
 .book:hover, .join:hover {
     background-color:#efe14a ;
     color: #150641;
@@ -96,18 +107,6 @@ main section img {
 .button-box {
     text-align: center;
     
-}
-
-
-main section {
-    text-align: center;
-    
-
-}
-
-h2 {
-    margin: 0;
-
 }
 
 .icon {
@@ -129,6 +128,7 @@ h2 {
     line-height: 1.5em;
     padding: 35px;
     margin-top: 200px;
+    margin-bottom: 200px;
 
 }
 
