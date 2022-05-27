@@ -48,7 +48,6 @@
   width: 100px; 
   height: 100px; 
   background-color: red;
-  margin: -50px 0 0 50px;
 
 } 
 
@@ -56,7 +55,7 @@
   width: 100px; 
   height: 100px; 
   background-color: green;
-  margin: -50px 0 0 100px;
+  margin: -50px 0 0 50px;
 
 } 
 
@@ -64,7 +63,7 @@
   width: 100px; 
   height: 100px; 
   background-color: gold;
-  margin: -50px 0 0 150px;
+  margin: -50px 0 0 100px;
 
 } 
 
@@ -72,7 +71,7 @@
   width: 100px; 
   height: 100px; 
   background-color: blue; 
-  margin: -50px 0 0 200px;
+  margin: -50px 0 0 150px;
 
 } 
 
@@ -96,13 +95,13 @@
 
 .green3 {
   width: 100%; 
-  height: 150px; 
+  height: 200px; 
   background-color: green;
   
 } 
 .yellow3 {
   width: 100%; 
-  height: 150px; 
+  height: 200px; 
   background-color: gold;
 
 } 
@@ -169,19 +168,20 @@
   /* This is the parent of the activity 5 boxes. */
   max-width: 100%;
   height: 400px;
-
+  
 }
 
 .red5 { 
   max-width: 100%; 
   height: 100px; 
   background-color: red; 
+  position: relative;
   
 }
 
 .green5 { 
-  width: 150px; 
-  height: 150px; 
+  width: 200px; 
+  height: 200px; 
   float: left;
   background-color: green;
   margin-right: 15px; 
@@ -190,9 +190,9 @@
 
 .yellow5 {
   max-width: 100%; 
-  max-height: 200px;
+  min-height: 200px; 
   background-color: gold;
-  padding: 10px 10px 10px;
+  padding: 15px 15px 15px;
   
 } 
 
