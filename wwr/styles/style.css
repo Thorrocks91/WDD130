@@ -205,9 +205,7 @@ main section {
     grid-row: 4/9;
     background-color: #efe14a;
     height: 725px;
-    padding-bottom: -10px;
-    margin-bottom: -50px;
-    margin-top: -100px;
+    padding-top: 200px;
     
 }
 
@@ -224,7 +222,6 @@ main section {
     box-shadow: 5px 5px 10px #150641;
     background:#999;
     padding: 35px;
-   
 
 }
 
