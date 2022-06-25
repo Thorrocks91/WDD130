@@ -5,8 +5,14 @@
     max-width: 1600px;
     margin: 0 auto;
 }
+header {
+    display: grid;
+    grid-template-columns: 150px auto;
+    align-items: center;
+    background: linear-gradient(to right, #ffffff, #ffc9cb);
+}
 nav {
-	background: linear-gradient(to right, #ffffff, #ffc9cb);
+	
 	padding: 1.3em;
     text-align: center;
     justify-content: space-around;
