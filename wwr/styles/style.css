@@ -342,11 +342,10 @@ h1 {
 .card-img-2 {
     border: 20px solid #150641;
     box-shadow: 5px 5px 10px #150641;
-    padding: px;
-    margin: 2rem;
+    margin: 1rem;
     grid-column: 2/3;
     grid-row: 2/3;
-    height: 500px;
+    
 }
 
 .company-msg {
