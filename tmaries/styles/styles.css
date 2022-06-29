@@ -508,7 +508,7 @@ nav a:hover {
 .featured-card {
     grid-column: 8/11;
     grid-row: 2/4;
-    max-width: auto;
+    
 
 }
 
