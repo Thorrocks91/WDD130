@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T.Marie's | Home</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <div id="content">
+        <header>
+            <img id="logo" src="images/logo.png" alt="logo">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+
+        </header>
+        <main>
+            <div id="feedback"></div>
+            <form action="/my-handling-form-page" method="post">
+                <ul>
+                    <li>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="user_name">
+                    </li>
+                    <li>
+                        <label for="mail">E-mail:</label>
+                        <input type="email" id="mail" name="user_email">
+                    </li>
+                    <li>
+                        <label for="msg">Message:</label>
+                        <textarea id="msg" name="user_message"></textarea>
+                    </li>
+                    <li class="button">
+                        <button type="submit">Submit Order</button>
+                    </li>
+                </ul>
+            </form>
+
+        </main>
+
+
+        <footer>
+            <div class="leftcol">
+                <p id="info">
+                    2022 T. Marie's Confectionaries || Tiffany Horrocks-WDD130-22 || <a href="site-plan.html">Site
+                        Plan</a>
+                </p>
+            </div>
+            <div class="rightcol">
+                <a href="https://www.facebook.com/" target="_blank"><img class="socialmedia"
+                        src="https://cdn.glitch.me/9818afb4-faa6-4a45-be62-a003d3aff07f%2Ffacebook.png?v=1633808251562"
+                        alt="Facebook" /></a>
+                <a href="https://www.instagram.com/" target="_blank"><img class="socialmedia"
+                        src="https://cdn.glitch.me/9818afb4-faa6-4a45-be62-a003d3aff07f%2Finstagram.png?v=1633808268563"
+                        alt="Instagram" /></a>
+                <a href="https://www.youtube.com/" target="_blank"><img class="socialmedia"
+                        src="https://cdn.glitch.me/9818afb4-faa6-4a45-be62-a003d3aff07f%2Fyoutube.png?v=1633808260779"
+                        alt="Youtube" /></a>
+            </div>
+        </footer>
+    </div>
+    <script>
+        // get the feedback div element so we can do something with it.
+        const feedbackElement = document.getElementById('feedback');
+        // get the form so we can read what was entered in it.
+        const formElement = document.forms[0];
+        // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+        formElement.addEventListener('submit', function (e) {
+            // stop the form from doing the default action.
+            e.preventDefault();
+            // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+            feedbackElement.innerHTML = 'Hello ' + formElement.user_name.value +
+                '! Thank you for your order. We will send you an email with your shipping information!';
+            // make the feedback element visible.
+            feedbackElement.style.display = "block";
+            // add a class to move everything down so our message doesn't cover it.
+            document.body.classList.toggle('moveDown');
+        });
+    </script>
+</body>
+
+</html>

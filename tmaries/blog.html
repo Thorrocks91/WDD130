@@ -118,8 +118,39 @@
                         <li class="recipe-list">2 tablespoons heavy cream</li>
                         <li class="recipe-list">1/2 tsp finely ground salt</li>
                     </ul>
+                    <!-- Add icon library -->
+                    <link rel="stylesheet"
+                        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+                    <!-- Use an element to toggle between a like/dislike icon -->
+                    <p>Click on the icon and let us know how you liked this recipe and leave us a review.</p>
+
+                    <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+                    <section id="app">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="comment">
+                                        <p v-for="items in item" v-text="items"></p>
+                                    </div>
+                                    <!--End Comment-->
+                                </div>
+                                <!--End col -->
+                            </div><!-- End row -->
+                            <div class="row">
+                                <div class="col-6">
+                                    <textarea type="text" class="input" placeholder="Write a comment" v-model="newItem"
+                                        @keyup.enter="addItem()"></textarea>
+                                    <button v-on:click="addItem()" class='primaryContained float-right'
+                                        type="submit">Add Comment</button>
+                                </div><!-- End col -->
+                            </div>
+                            <!--End Row -->
+                        </div>
+                        <!--End Container -->
+                    </section><!-- end App -->
                 </div>
-            </section>    
+            </section>
         </main>
         <footer>
             <div class="leftcol">
@@ -140,6 +171,46 @@
                         alt="Youtube" /></a>
             </div>
         </footer>
-    </div>    
+    </div>
+    <!-- Vue JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+    <!-- jQuery -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'>
+        $(document).ready(function () {
+
+            $(".primaryContained").on('click', function () {
+                $(".comment").addClass("commentClicked");
+            }); //end click
+            $("textarea").on('keyup.enter', function () {
+                $(".comment").addClass("commentClicked");
+            }); //end keyup
+        }); //End Function
+
+        new Vue({
+            el: "#app",
+            data: {
+                title: 'Add a comment',
+                newItem: '',
+                item: [],
+            },
+            methods: {
+                addItem() {
+                    this.item.push(this.newItem);
+                    this.newItem = "";
+                }
+            }
+
+        });
+            
+    </script>
+    <script>
+        function myFunction(x) {
+            x.classList.toggle("fa-thumbs-down");
+        }
+    </script>
+
 </body>
+
 </html>
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

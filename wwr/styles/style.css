@@ -639,9 +639,12 @@ button {
         color: #6f7364;
     }
 
-    .rivers-card,
-    .camping-card,
-    .rapids-card {
+    .ras-card,
+    .macroon-card,
+    .cake-card,
+    .tip-card,
+    .featured-card,
+    .recipe-card {
         margin: 50px auto;
         width: 60%;
     }
@@ -650,7 +653,7 @@ button {
         display: none;
     }
 
-    .mountains,
+    .pink,
     .msg {
         width: 80%;
         display: block;
